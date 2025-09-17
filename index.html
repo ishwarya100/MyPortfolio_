@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishwarya Kamble - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Ishwarya Kamble</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#" onclick="showSection('certifications')">Certifications</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p><span class="typed-text"></span><span class="cursor">|</span></p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p class="section-subtitle">Crafting AI-powered solutions and web applications</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a dedicated B.Tech Computer Science student with a strong focus on Artificial Intelligence and Machine Learning. 
+                        I specialize in building intelligent models, deploying real-world AI solutions, and creating seamless web applications.
+                    </p>
+                    <p>
+                        With experience in Python, Django, Streamlit, and cloud tools, I aim to develop impactful projects 
+                        that combine innovation with practical usability.
+                    </p>
+                </div>
+            </div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <div class="skills-container">
+                    <div class="skill-card"><span>Python</span><div class="progress-bar"><div class="progress" style="width: 95%;"></div></div></div>
+                    <div class="skill-card"><span>Machine Learning</span><div class="progress-bar"><div class="progress" style="width: 90%;"></div></div></div>
+                    <div class="skill-card"><span>Deep Learning</span><div class="progress-bar"><div class="progress" style="width: 85%;"></div></div></div>
+                    <div class="skill-card"><span>Natural Language Processing (NLP)</span><div class="progress-bar"><div class="progress" style="width: 80%;"></div></div></div>
+                    <div class="skill-card"><span>Django</span><div class="progress-bar"><div class="progress" style="width: 85%;"></div></div></div>
+                    <div class="skill-card"><span>Streamlit</span><div class="progress-bar"><div class="progress" style="width: 90%;"></div></div></div>
+                    <div class="skill-card"><span>TensorFlow</span><div class="progress-bar"><div class="progress" style="width: 80%;"></div></div></div>
+                    <div class="skill-card"><span>Scikit-learn</span><div class="progress-bar"><div class="progress" style="width: 85%;"></div></div></div>
+                    <div class="skill-card"><span>Git & GitHub</span><div class="progress-bar"><div class="progress" style="width: 90%;"></div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <p class="section-subtitle">Explore my work</p>
+            <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+            </div>
+            <div class="projects-grid">
+                <!-- AI Search Agent Chatbot -->
+                <div class="project-card" data-category="ai" onclick="showProject('project-chatbot')">
+                    <img src="https://static.thenounproject.com/png/7742182-512.png" alt="AI Chatbot">
+                    <h3>AI Search Agent Chatbot</h3>
+                    <p>Streamlit chatbot powered by LangChain + Gemma 2B LLM for intelligent Q&A.</p>
+                </div>
+
+                <!-- Multi-Disease Prediction -->
+                <div class="project-card" data-category="ai" onclick="showProject('project-disease')">
+                    <img src="https://www.shutterstock.com/image-vector/health-care-black-glyph-icon-600nw-1859845591.jpg" alt="Disease Prediction">
+                    <h3>Multi-Disease Prediction System</h3>
+                    <p>ML system predicting 5 diseases with 80–95% accuracy. Deployed with Streamlit.</p>
+                </div>
+
+                <!-- Online Bookstore -->
+                <div class="project-card" data-category="web" onclick="showProject('project-bookstore')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk2YiIa-8fiSuRkVEi2yJLjBsdO_vefNWgoQ&s" alt="Online Bookstore">
+                    <h3>Online Bookstore Web App</h3>
+                    <p>Django-based web app with cart, order management, and user system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Individual Project Sections -->
+    <section id="project-chatbot" class="project-detail">
+        <div class="container">
+            <h2>AI Search Agent Chatbot</h2>
+            <img src="https://static.thenounproject.com/png/7742182-512.png" alt="Chatbot Screenshot">
+            <p>
+                Developed an AI-powered chatbot using Streamlit, LangChain, and Ollama. 
+                Integrated the Gemma 2B LLM with real-time Wikipedia and Arxiv search. 
+                Provides a seamless conversational experience.
+            </p>
+            <a href="https://github.com/ishwarya100/Searching_AI_Agent" target="_blank" class="project-link">View on GitHub</a>
+            <a href="https://drive.google.com/file/d/1-0h_QdHu7OA24pShAi4Lzg9e8_eaVESx/view?usp=sharing" target="_blank" class="project-link">Live Demo</a>
+            <button onclick="goBack()">Back to Projects</button>
+        </div>
+    </section>
+
+    <section id="project-disease" class="project-detail">
+        <div class="container">
+            <h2>Multi-Disease Prediction System</h2>
+            <img src="https://www.shutterstock.com/image-vector/health-care-black-glyph-icon-600nw-1859845591.jpg" alt="Disease Prediction Screenshot">
+            <p>
+                Built a system predicting five diseases (diabetes, heart disease, lung cancer, Parkinson’s, thyroid) 
+                with accuracy between 80–95%. Trained on medical datasets with 5,000+ patient records 
+                and deployed using Streamlit for instant predictions.
+            </p>
+            <a href="https://github.com/ishwarya100/Disease-Detection" target="_blank" class="project-link">View on GitHub</a>
+            <a href="https://disease-detection-1.streamlit.app/" target="_blank" class="project-link">Live Demo</a>
+            <button onclick="goBack()">Back to Projects</button>
+        </div>
+    </section>
+
+    <section id="project-bookstore" class="project-detail">
+        <div class="container">
+            <h2>Online Bookstore Web Application</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk2YiIa-8fiSuRkVEi2yJLjBsdO_vefNWgoQ&s" alt="Bookstore Screenshot">
+            <p>
+                Developed a Django-based bookstore application with features like book browsing, shopping cart, 
+                and order management. Integrated relational database (SQLite) for users, books, and transactions, 
+                along with responsive front-end using Bootstrap.
+            </p>
+            <a href="https://github.com/ishwarya100/Online_BookStore" target="_blank" class="project-link">View on GitHub</a>
+            <a href="https://online-bookstore-kr7u.onrender.com" target="_blank" class="project-link">Live Demo</a>
+            <button onclick="goBack()">Back to Projects</button>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+<section id="certifications">
+    <div class="container">
+        <h2>Certifications</h2>
+        <p class="section-subtitle">My achievements and credentials</p>
+        <div class="certifications-grid">
+            
+            <div class="cert-card">
+                <h3>Artificial Intelligence</h3>
+                <p>Infosys</p>
+                <a href="certifications/Infosys_AI_Certificate.pdf" target="_blank">View Certificate</a>
+            </div>
+
+            <div class="cert-card">
+                <h3>Machine Learning</h3>
+                <p>TIMES PRO</p>
+                <a href="certifications\AICTE_ML_Certificate.pdf" target="_blank">View Certificate</a>
+            </div>
+
+            <div class="cert-card">
+                <h3>Deep Learning</h3>
+                <p>Infosys</p>
+                <a href="certifications/Infosys_DL_Certificate.pdf" target="_blank">View Certificate</a>
+            </div>
+
+            <div class="cert-card">
+                <h3>Gen AI</h3>
+                <p>Infosys</p>
+                <a href="certifications/Infosys_GenAI_Certificate.pdf" target="_blank">View Certificate</a>
+            </div>
+
+            <div class="cert-card">
+                <h3>Prompt Engineering</h3>
+                <p>Infosys</p>
+                <a href="certifications/Prompt_Engineering_Certificate.pdf" target="_blank">View Certificate</a>
+            </div>
+
+            <div class="cert-card">
+                <h3>Python</h3>
+                <p>Cisco Networking Academy</p>
+                <a href="certifications/Cisco_PE_Certificate.pdf" target="_blank">View Certificate</a>
+            </div>
+
+            <div class="cert-card">
+                <h3>C Advanced</h3>
+                <p>Cisco Networking Academy</p>
+                <a href="certifications/C_Advanced_Certificate.pdf" target="_blank">View Certificate</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p class="section-subtitle">Let's connect and build something amazing</p>
+            <div class="contact-content">
+                <p>Email: <a href="mailto:kambleishwarya318@gmail.com">kambleishwarya318@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/ashu12/" target="_blank">linkedin.com/in/ishwarya-kamble</a></p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Ishwarya Kamble. All rights reserved.</p>
+    </footer>
+</body>
+</html>
